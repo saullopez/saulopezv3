@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Saul Lopez</title>
+   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="Portfolio of a mechanical engineering student at MIT" content="Portfolio of a mechanical engineering student at MIT">
+  <meta name="Saul" content="Saul Lopez Portfolio">
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+            <div class="navbar-fixed-top"><p>&nbsp;</p></div>
+              <div class="navbar navbar-fixed-top">
+                  <div class="navbar-inner">
+                      <div class="container-fluid">
+                       <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    </a>
+<a class="brand">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Saul Lopez&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                            <!-- Everything you want hidden at 940px or less, place within here -->
+          <div class="nav-collapse collapse">
+                                <!-- .nav, .navbar-search, .navbar-form, etc -->
+  <ul class="nav">
+      <li class="divider-vertical"></li>
+
+      <li class=<%= 'active' if @current_page == :index %>><a <%= @current_page == :index ? href='#' : href= "href = #{index_path}" %>> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Super NintenYo&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+      </li>
+
+      <li class=<%= 'active' if @current_page == :about %>><a <%= @current_page == :about ? href="#" : href= "href = #{about_path}" %>>&nbsp;&nbsp;&nbsp;&nbsp;Product Development Process&nbsp;&nbsp;&nbsp;&nbsp;</a>
+      </li>
+
+      <li class=<%= 'active' if @current_page == :projects %>><a <%= @current_page == :projects ? href='#' : href= "href = #{projects_path}" %>>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Personal Projects&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+      </li>
+
+      <li class=<%= 'active' if @current_page == :contact %>><a <%= @current_page == :contact ? href='#' : href= "href = #{contact_path}" %>>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Contact&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+      </li>
+
+      <li class="divider-vertical"></li>
+  </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <!-- /.navbar -->
+
+<%= yield %>
+
+<!-- FOOTER -->
+              <div>    
+      <hr>
+                <div class="footer">
+                    <p>&copy; Saul A. Lopez 2013</p>
+                </div>
+      </div>
+
+</div>
+
+</body>
+</html>

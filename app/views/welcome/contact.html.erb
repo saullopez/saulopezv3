@@ -1,0 +1,44 @@
+<!-- Main hero unit for a primary marketing message or call to action -->
+      <div class="hero-unit borders">
+        <h1 style="font-size: 2.7em;">Let's work together!</h1>
+        <p>Contact us using the form below. We will do our best to respond to all inquiries within a 24 hour period. If you would like to leave a number, we could also call you to set up a visit for a quote.</p>
+      </div>
+<hr class="rowcol container-fluid">
+<br>
+
+
+
+<!--Email form-->
+<div class="container-fluid" style="margin: 0 5% 0 5%;">
+    <div style="padding: 30px 0 60px 0;" class="container-fluid rowcol">
+<table style="width: 100%;">
+  <tr>
+     <td style="text-align: center;">
+<%= form_tag controller: 'welcome', action: 'send_contact', method: 'post' do |builder| %>
+      <div class="controls controls-row" id="name-mail"style="display: inline-block; text-align:center;">
+
+          <%= text_field_tag :name, nil, placeholder: 'Name', class: "span3" %>
+ 
+          <%= text_field_tag :email, nil, placeholder: 'Email Address', class: "span3" %>
+      </div>
+      <div class="controls" style="padding-bottom: 10px;" id="message-div">
+
+          <%= text_area_tag :message, nil, placeholder: 'Your Message', class: "span6" %>
+      </div>
+      
+      <div class="controls pull-right" style="margin:0 21% 0 21%;">
+          <%= submit_tag "Send", class: 'btn custom-btn pull-right' %>
+          <% end %>
+      </div>
+  </form>
+</div>
+</div>
+</div class="container-fluid">
+     </td>
+  </tr>
+</table>
+</div>
+</div>
+<% flash.each do |key, value| %>
+    <div class="alert alert-success"><%= value %></div>
+<% end %>
