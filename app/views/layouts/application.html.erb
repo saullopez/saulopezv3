@@ -20,7 +20,7 @@
     <span class="icon-bar"></span>
     <span class="icon-bar"></span>
     </a>
-<a class="brand">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Saul Lopez&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+<a class="brand">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Saul Lopez&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
                             <!-- Everything you want hidden at 940px or less, place within here -->
           <div class="nav-collapse collapse">
                                 <!-- .nav, .navbar-search, .navbar-form, etc -->
@@ -33,8 +33,14 @@
       <li class=<%= 'active' if @current_page == :about %>><a <%= @current_page == :about ? href="#" : href= "href = #{about_path}" %>>&nbsp;&nbsp;&nbsp;&nbsp;Product Development Process&nbsp;&nbsp;&nbsp;&nbsp;</a>
       </li>
 
-      <li class=<%= 'active' if @current_page == :projects %>><a <%= @current_page == :projects ? href='#' : href= "href = #{projects_path}" %>>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Personal Projects&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
-      </li>
+    <li class="dropdown" class=<%= 'active' if @current_page == :projects %>>
+    <a class="dropdown-toggle" data-toggle="dropdown"<%= @current_page == :projects ? href='#' : href= "href = #{projects_path}" %>>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Personal Projects&nbsp;&nbsp;&nbsp;<b class="caret"></b>&nbsp;&nbsp;&nbsp;&nbsp;</a>
+     <ul class="dropdown-menu">
+      <li><a href=<%= index_path %>>Action</a></li>
+      <li><a href="#">Another action</a></li>
+      <li><a href="#">Something else here</a></li>
+     </ul>
+    </li>
 
       <li class=<%= 'active' if @current_page == :contact %>><a <%= @current_page == :contact ? href='#' : href= "href = #{contact_path}" %>>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Contact&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
       </li>
